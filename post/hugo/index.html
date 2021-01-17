@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Hugo // LI Jiliang</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://jiliangli1997.github.io/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo"/>
+<meta name="twitter:description" content="hugo installation, publish and matainance base on Mac OS
+install hugo  install brew use brew to install hugo  brew install hugo  check version  hugo version generate website  generate your website folder  hugo new site myblog get a theme  https://themes.gohugo.io/  start site on local host hugo server -t m10c -- buildDrafts m10c is the theme name
+ use &ldquo;hugo server&rdquo; to check local website later  deploy on github page  creat a new repository, the name must same as the user name &#43; ."/>
+
+    <meta property="og:title" content="Hugo" />
+<meta property="og:description" content="hugo installation, publish and matainance base on Mac OS
+install hugo  install brew use brew to install hugo  brew install hugo  check version  hugo version generate website  generate your website folder  hugo new site myblog get a theme  https://themes.gohugo.io/  start site on local host hugo server -t m10c -- buildDrafts m10c is the theme name
+ use &ldquo;hugo server&rdquo; to check local website later  deploy on github page  creat a new repository, the name must same as the user name &#43; ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jiliangli1997.github.io/post/hugo/" />
+<meta property="article:published_time" content="2021-01-17T00:13:26-08:00" />
+<meta property="article:modified_time" content="2021-01-17T00:13:26-08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://jiliangli1997.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>LI Jiliang</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Hugo</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 17, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="hugo-installation-publish-and-matainance">hugo installation, publish and matainance</h1>
+<p><em>base on Mac OS</em></p>
+<h3 id="install-hugo">install hugo</h3>
+<ul>
+<li>install brew</li>
+<li>use brew to install hugo</li>
+</ul>
+<pre><code>brew install hugo
+</code></pre><ul>
+<li>check version</li>
+</ul>
+<pre><code>hugo version
+</code></pre><h3 id="generate-website">generate website</h3>
+<ul>
+<li>generate your website folder</li>
+</ul>
+<pre><code>hugo new site myblog
+</code></pre><h3 id="get-a-theme">get a theme</h3>
+<ul>
+<li><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></li>
+</ul>
+<h3 id="start-site-on-local-host">start site on local host</h3>
+<pre><code>hugo server -t m10c -- buildDrafts
+</code></pre><p><em>m10c is the theme name</em></p>
+<ul>
+<li>use &ldquo;hugo server&rdquo; to check local website later</li>
+</ul>
+<h3 id="deploy-on-github-page">deploy on github page</h3>
+<ul>
+<li>creat a new repository, the name must same as the user name + .github.io</li>
+<li>put all your local file into the pulic folder, all files in public folder are ready to be pushed to github repo</li>
+</ul>
+<pre><code>hugo --theme=m10c --baseUrl=&quot;https://jiliangli1997.github.io/&quot; --buildDrafts
+// in myblog 
+</code></pre><ul>
+<li>push public to repo first time</li>
+</ul>
+<pre><code>cd public 
+git init
+git add .
+git commit -m &quot;hugo&quot;
+git remote add origin https://github.com/jiliang1997/jiliangli1997.github.io.git
+git push -u origin master
+// under public 
+</code></pre><ul>
+<li>after first time, just need these for <strong>update any change</strong></li>
+</ul>
+<pre><code>hugo --theme=m10c --baseUrl=&quot;https://jiliangli1997.github.io/&quot; --buildDrafts
+// in myblog 
+cd public
+git add .
+git commit -m &quot;hugo&quot;
+git push -u origin master
+// under public 
+</code></pre><h3 id="write-a-blog">write a blog</h3>
+<pre><code>hugo new post/name.md
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
