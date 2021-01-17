@@ -6,7 +6,16 @@
     <description>Recent content in Posts on LI Jiliang</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 16 Jan 2021 22:07:09 -0800</lastBuildDate><atom:link href="https://jiliangli1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 16 Jan 2021 22:55:43 -0800</lastBuildDate><atom:link href="https://jiliangli1997.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo_tutotial</title>
+      <link>https://jiliangli1997.github.io/post/hugo_tutotial/</link>
+      <pubDate>Sat, 16 Jan 2021 22:55:43 -0800</pubDate>
+      
+      <guid>https://jiliangli1997.github.io/post/hugo_tutotial/</guid>
+      <description>simple markdown  “#”的数量决定标题字体的大小 文字左右两边用一个*夹住表示斜体   *文字斜体*  文字左右两边用两个*夹住表示加粗  **文字加粗**  清单： 在句子前面加“-”， 缩紧写法可以形成巢状构图 分割线： *** 或者 &amp;mdash; 都是三个  </description>
+    </item>
+    
     <item>
       <title>Lc_42</title>
       <link>https://jiliangli1997.github.io/post/lc_42/</link>
