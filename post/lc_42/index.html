@@ -1,71 +1,140 @@
-<!doctype html>
-<html lang="en-us">
-  <head>
-    <title>Lc_42 // </title>
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.80.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="Jiliang Li" />
-    <meta name="description" content="" />
-    <link rel="stylesheet" href="https://jiliangli1997.github.io/css/main.min.68e582a4d4ed824d6b7e3b5b37cae47eb3779bd631046379d0e68b38230cc3e2.css" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="Trapping Rain Water Main concept  找到左右两边最高点 以每个slot为单元记录这个单元的存水量 该单元存水量 = 此时最近的最低点 - 该单元高度 随时更新最近最低点   code class Solution { public int trap(int[] height) { int res = 0; if (height == null || height.length == 0) { return 0; } //find highest  int highLeft = 0; for(int i = 0; i &amp;lt; height.length; i&#43;&#43;) { if (height[i] &amp;gt; height[highLeft]) { highLeft = i; } } int highRight = 0; for(int i = height." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://jiliangli1997.github.io/post/lc_42/" />
 
-    
-    <meta name="twitter:card" content="summary"/>
+
+    <title>
+        
+            Lc_42 :: Jiliang Site  — Be Myself
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.d7bdd8ee18bfbf4c605488a7e5b1b92cd980dfeed2bdaeab4dd5e931a7a78bc0.css">
+
+
+
+
+
+
+<meta itemprop="name" content="Lc_42">
+<meta itemprop="description" content="Trapping Rain Water Main concept  找到左右两边最高点 以每个slot为单元记录这个单元的存水量 该单元存水量 = 此时最近的最低点 - 该单元高度 随时更新最近最低点   code class Solution { public int trap(int[] height) { int res = 0; if (height == null || height.length == 0) { return 0; } //find highest  int highLeft = 0; for(int i = 0; i &lt; height.length; i&#43;&#43;) { if (height[i] &gt; height[highLeft]) { highLeft = i; } } int highRight = 0; for(int i = height.">
+<meta itemprop="datePublished" content="2021-01-16T22:07:09-08:00" />
+<meta itemprop="dateModified" content="2021-01-16T22:07:09-08:00" />
+<meta itemprop="wordCount" content="198">
+<meta itemprop="image" content="https://jiliangli1997.github.io/"/>
+
+
+
+<meta itemprop="keywords" content="" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://jiliangli1997.github.io/"/>
+
 <meta name="twitter:title" content="Lc_42"/>
 <meta name="twitter:description" content="Trapping Rain Water Main concept  找到左右两边最高点 以每个slot为单元记录这个单元的存水量 该单元存水量 = 此时最近的最低点 - 该单元高度 随时更新最近最低点   code class Solution { public int trap(int[] height) { int res = 0; if (height == null || height.length == 0) { return 0; } //find highest  int highLeft = 0; for(int i = 0; i &lt; height.length; i&#43;&#43;) { if (height[i] &gt; height[highLeft]) { highLeft = i; } } int highRight = 0; for(int i = height."/>
+
+
+
 
     <meta property="og:title" content="Lc_42" />
 <meta property="og:description" content="Trapping Rain Water Main concept  找到左右两边最高点 以每个slot为单元记录这个单元的存水量 该单元存水量 = 此时最近的最低点 - 该单元高度 随时更新最近最低点   code class Solution { public int trap(int[] height) { int res = 0; if (height == null || height.length == 0) { return 0; } //find highest  int highLeft = 0; for(int i = 0; i &lt; height.length; i&#43;&#43;) { if (height[i] &gt; height[highLeft]) { highLeft = i; } } int highRight = 0; for(int i = height." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jiliangli1997.github.io/post/lc_42/" />
+<meta property="og:image" content="https://jiliangli1997.github.io/"/>
 <meta property="article:published_time" content="2021-01-16T22:07:09-08:00" />
-<meta property="article:modified_time" content="2021-01-16T22:07:09-08:00" />
+<meta property="article:modified_time" content="2021-01-16T22:07:09-08:00" /><meta property="og:site_name" content="Jiliang Site" />
 
 
-  </head>
-  <body>
-    <header class="app-header">
-      <a href="https://jiliangli1997.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Jiliang Li" /></a>
-      <h1></h1>
-      <nav class="app-header-menu">
-          <a class="app-header-menu-item" href="/about/">About</a>
-             - 
-          
-          <a class="app-header-menu-item" href="/life/">Life</a>
-             - 
-          
-          <a class="app-header-menu-item" href="/sci-tech/">Sci-Tech</a>
-      </nav>
-      <p>Family above all</p>
-      <div class="app-header-social">
+
+
+
+
+    <meta property="article:published_time" content="2021-01-16 22:07:09 -0800 PST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
         
-      </div>
-    </header>
-    <main class="app-container">
-      
-  <article class="post">
-    <header class="post-header">
-      <h1 class ="post-title">Lc_42</h1>
-      <div class="post-meta">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
-  <title>calendar</title>
-  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg>
-          Jan 16, 2021
+            <span class="logo__mark">></span>
+            <span class="logo__text">hello friend ng</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">Blog</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
         </div>
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
-  <title>clock</title>
-  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg>
-          1 min read
-        </div>
-      </div>
-    </header>
-    <div class="post-content">
-      <h1 id="trapping-rain-water">Trapping Rain Water</h1>
+
+        <article>
+            <h2 class="post-title"><a href="https://jiliangli1997.github.io/post/lc_42/">Lc_42</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <h1 id="trapping-rain-water">Trapping Rain Water</h1>
 <h3 id="main-concept">Main concept</h3>
 <ul>
 <li>找到左右两边最高点</li>
@@ -131,12 +200,46 @@
 <span style="color:#f92672">}</span>
 </code></pre></div><p><em>youtube：<a href="https://www.youtube.com/watch?v=bu1quf2rOp8&amp;ab_channel=%E5%B1%B1%E6%99%AF%E5%9F%8E%E4%B8%80%E5%A7%90">https://www.youtube.com/watch?v=bu1quf2rOp8&amp;ab_channel=%E5%B1%B1%E6%99%AF%E5%9F%8E%E4%B8%80%E5%A7%90</a></em></p>
 
-    </div>
-    <div class="post-footer">
-      
-    </div>
-  </article>
+            </div>
+        </article>
 
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
     </main>
-  </body>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2021</span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span><span><a href="https://jiliangli1997.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+          </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.af435e44374f1e99a669ea8cd5bb9a2fceed80588941a451bfddb66b86a67c9f40b0f417e9543a763f809aa7e9300d7b1d69bf99615810ba02ac70396d50fad5.js" integrity="sha512-r0NeRDdPHpmmaeqM1buaL87tgFiJQaRRv922a4amfJ9AsPQX6VQ6dj&#43;AmqfpMA17HWm/mWFYELoCrHA5bVD61Q=="></script>
+
+
+
+    </body>
 </html>
