@@ -19,5 +19,173 @@
             <content type="html"><![CDATA[]]></content>
         </item>
         
+        <item>
+            <title>Hugo</title>
+            <link>https://jiliangli1997.github.io/posts/hugo/</link>
+            <pubDate>Sun, 17 Jan 2021 00:13:26 -0800</pubDate>
+            
+            <guid>https://jiliangli1997.github.io/posts/hugo/</guid>
+            <description>hugo installation, publish and matainance base on Mac OS
+install hugo  install brew use brew to install hugo  brew install hugo  check version  hugo version generate website  generate your website folder  hugo new site myblog get a theme  https://themes.gohugo.io/  start site on local host hugo server -t m10c -- buildDrafts m10c is the theme name
+ use &amp;ldquo;hugo server&amp;rdquo; to check local website later  deploy on github page  creat a new repository, the name must same as the user name + .</description>
+            <content type="html"><![CDATA[<h1 id="hugo-installation-publish-and-matainance">hugo installation, publish and matainance</h1>
+<p><em>base on Mac OS</em></p>
+<h3 id="install-hugo">install hugo</h3>
+<ul>
+<li>install brew</li>
+<li>use brew to install hugo</li>
+</ul>
+<pre><code>brew install hugo
+</code></pre><ul>
+<li>check version</li>
+</ul>
+<pre><code>hugo version
+</code></pre><h3 id="generate-website">generate website</h3>
+<ul>
+<li>generate your website folder</li>
+</ul>
+<pre><code>hugo new site myblog
+</code></pre><h3 id="get-a-theme">get a theme</h3>
+<ul>
+<li><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></li>
+</ul>
+<h3 id="start-site-on-local-host">start site on local host</h3>
+<pre><code>hugo server -t m10c -- buildDrafts
+</code></pre><p><em>m10c is the theme name</em></p>
+<ul>
+<li>use &ldquo;hugo server&rdquo; to check local website later</li>
+</ul>
+<h3 id="deploy-on-github-page">deploy on github page</h3>
+<ul>
+<li>creat a new repository, the name must same as the user name + .github.io</li>
+<li>put all your local file into the pulic folder, all files in public folder are ready to be pushed to github repo</li>
+</ul>
+<pre><code>hugo --theme=m10c --baseUrl=&quot;https://jiliangli1997.github.io/&quot; --buildDrafts
+// in myblog 
+</code></pre><ul>
+<li>push public to repo first time</li>
+</ul>
+<pre><code>cd public 
+git init
+git add .
+git commit -m &quot;hugo&quot;
+git remote add origin https://github.com/jiliang1997/jiliangli1997.github.io.git
+git push -u origin master
+// under public 
+</code></pre><ul>
+<li>after first time, just need these for <strong>update any change</strong></li>
+</ul>
+<pre><code>hugo --theme=m10c --baseUrl=&quot;https://jiliangli1997.github.io/&quot; --buildDrafts
+// in myblog 
+cd public
+git add .
+git commit -m &quot;hugo&quot;
+git push -u origin master
+// under public 
+</code></pre><h3 id="write-a-blog">write a blog</h3>
+<pre><code>hugo new post/name.md
+</code></pre>]]></content>
+        </item>
+        
+        <item>
+            <title>simple markdown </title>
+            <link>https://jiliangli1997.github.io/posts/simple-markdown/</link>
+            <pubDate>Sat, 16 Jan 2021 22:55:43 -0800</pubDate>
+            
+            <guid>https://jiliangli1997.github.io/posts/simple-markdown/</guid>
+            <description>simple markdown  “#”的数量决定标题字体的大小 文字左右两边用一个*夹住表示斜体   *文字斜体*  文字左右两边用两个*夹住表示加粗  **文字加粗**  清单： 在句子前面加“-”， 缩紧写法可以形成巢状构图 分割线： *** 或者 &amp;mdash; 都是三个 链接： &amp;lt;&amp;gt;  </description>
+            <content type="html"><![CDATA[<h1 id="simple-markdown">simple markdown</h1>
+<ul>
+<li>“#”的数量决定标题字体的大小</li>
+<li>文字左右两边用一个*夹住表示斜体</li>
+</ul>
+<pre><code> *文字斜体*
+</code></pre><ul>
+<li>文字左右两边用两个*夹住表示加粗</li>
+</ul>
+<pre><code>**文字加粗**
+</code></pre><ul>
+<li>清单： 在句子前面加“-”， 缩紧写法可以形成巢状构图</li>
+<li>分割线： *** 或者 &mdash; 都是三个</li>
+<li>链接： &lt;&gt;</li>
+</ul>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Lc_42</title>
+            <link>https://jiliangli1997.github.io/posts/lc_42/</link>
+            <pubDate>Sat, 16 Jan 2021 22:07:09 -0800</pubDate>
+            
+            <guid>https://jiliangli1997.github.io/posts/lc_42/</guid>
+            <description>Trapping Rain Water Main concept  找到左右两边最高点 以每个slot为单元记录这个单元的存水量 该单元存水量 = 此时最近的最低点 - 该单元高度 随时更新最近最低点   code class Solution { public int trap(int[] height) { int res = 0; if (height == null || height.length == 0) { return 0; } //find highest  int highLeft = 0; for(int i = 0; i &amp;lt; height.length; i++) { if (height[i] &amp;gt; height[highLeft]) { highLeft = i; } } int highRight = 0; for(int i = height.</description>
+            <content type="html"><![CDATA[<h1 id="trapping-rain-water">Trapping Rain Water</h1>
+<h3 id="main-concept">Main concept</h3>
+<ul>
+<li>找到左右两边最高点</li>
+<li>以每个slot为单元记录这个单元的存水量</li>
+<li>该单元存水量 = 此时最近的最低点 - 该单元高度</li>
+<li>随时更新最近最低点</li>
+</ul>
+<hr>
+<h3 id="code">code</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">trap</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> height<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> res <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>height <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> height<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        
+        <span style="color:#75715e">//find highest
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> highLeft <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> height<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">[</span>highLeft<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                highLeft <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        
+        <span style="color:#66d9ef">int</span> highRight <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> height<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> height<span style="color:#f92672">[</span>highRight<span style="color:#f92672">])</span> <span style="color:#f92672">{</span>
+                highRight <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#75715e">//loop
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> lowLeft <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> highLeft<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">&amp;&amp;</span> height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;=</span> lowLeft<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                lowLeft <span style="color:#f92672">=</span> height<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> lowLeft<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                res <span style="color:#f92672">=</span>  res <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>lowLeft <span style="color:#f92672">-</span> height<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        
+        <span style="color:#66d9ef">if</span><span style="color:#f92672">(</span>highLeft <span style="color:#f92672">!=</span> highRight<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+             <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> highLeft<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> highRight<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                 res <span style="color:#f92672">=</span> res <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>highLeft<span style="color:#f92672">]</span> <span style="color:#f92672">-</span> height<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+             <span style="color:#f92672">}</span>
+
+        <span style="color:#f92672">}</span>
+        
+        <span style="color:#66d9ef">int</span> lowRight <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">for</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> height<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> highRight<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;</span> 0 <span style="color:#f92672">&amp;&amp;</span> height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&gt;=</span> lowRight<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                lowRight <span style="color:#f92672">=</span> height<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+            <span style="color:#f92672">}</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>height<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span> <span style="color:#f92672">&lt;</span> lowRight<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                res <span style="color:#f92672">=</span>  res <span style="color:#f92672">+</span> <span style="color:#f92672">(</span>lowRight <span style="color:#f92672">-</span> height<span style="color:#f92672">[</span>i<span style="color:#f92672">]);</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+        
+        <span style="color:#66d9ef">return</span> res<span style="color:#f92672">;</span>
+        
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><em>youtube：<a href="https://www.youtube.com/watch?v=bu1quf2rOp8&amp;ab_channel=%E5%B1%B1%E6%99%AF%E5%9F%8E%E4%B8%80%E5%A7%90">https://www.youtube.com/watch?v=bu1quf2rOp8&amp;ab_channel=%E5%B1%B1%E6%99%AF%E5%9F%8E%E4%B8%80%E5%A7%90</a></em></p>
+]]></content>
+        </item>
+        
     </channel>
 </rss>

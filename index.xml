@@ -29,6 +29,17 @@ install hugo  install brew use brew to install hugo  brew install hugo  check ve
     </item>
     
     <item>
+      <title>Hugo</title>
+      <link>https://jiliangli1997.github.io/posts/hugo/</link>
+      <pubDate>Sun, 17 Jan 2021 00:13:26 -0800</pubDate>
+      
+      <guid>https://jiliangli1997.github.io/posts/hugo/</guid>
+      <description>hugo installation, publish and matainance base on Mac OS
+install hugo  install brew use brew to install hugo  brew install hugo  check version  hugo version generate website  generate your website folder  hugo new site myblog get a theme  https://themes.gohugo.io/  start site on local host hugo server -t m10c -- buildDrafts m10c is the theme name
+ use &amp;ldquo;hugo server&amp;rdquo; to check local website later  deploy on github page  creat a new repository, the name must same as the user name + .</description>
+    </item>
+    
+    <item>
       <title>simple markdown </title>
       <link>https://jiliangli1997.github.io/post/simple-markdown/</link>
       <pubDate>Sat, 16 Jan 2021 22:55:43 -0800</pubDate>
@@ -38,11 +49,29 @@ install hugo  install brew use brew to install hugo  brew install hugo  check ve
     </item>
     
     <item>
+      <title>simple markdown </title>
+      <link>https://jiliangli1997.github.io/posts/simple-markdown/</link>
+      <pubDate>Sat, 16 Jan 2021 22:55:43 -0800</pubDate>
+      
+      <guid>https://jiliangli1997.github.io/posts/simple-markdown/</guid>
+      <description>simple markdown  “#”的数量决定标题字体的大小 文字左右两边用一个*夹住表示斜体   *文字斜体*  文字左右两边用两个*夹住表示加粗  **文字加粗**  清单： 在句子前面加“-”， 缩紧写法可以形成巢状构图 分割线： *** 或者 &amp;mdash; 都是三个 链接： &amp;lt;&amp;gt;  </description>
+    </item>
+    
+    <item>
       <title>Lc_42</title>
       <link>https://jiliangli1997.github.io/post/lc_42/</link>
       <pubDate>Sat, 16 Jan 2021 22:07:09 -0800</pubDate>
       
       <guid>https://jiliangli1997.github.io/post/lc_42/</guid>
+      <description>Trapping Rain Water Main concept  找到左右两边最高点 以每个slot为单元记录这个单元的存水量 该单元存水量 = 此时最近的最低点 - 该单元高度 随时更新最近最低点   code class Solution { public int trap(int[] height) { int res = 0; if (height == null || height.length == 0) { return 0; } //find highest  int highLeft = 0; for(int i = 0; i &amp;lt; height.length; i++) { if (height[i] &amp;gt; height[highLeft]) { highLeft = i; } } int highRight = 0; for(int i = height.</description>
+    </item>
+    
+    <item>
+      <title>Lc_42</title>
+      <link>https://jiliangli1997.github.io/posts/lc_42/</link>
+      <pubDate>Sat, 16 Jan 2021 22:07:09 -0800</pubDate>
+      
+      <guid>https://jiliangli1997.github.io/posts/lc_42/</guid>
       <description>Trapping Rain Water Main concept  找到左右两边最高点 以每个slot为单元记录这个单元的存水量 该单元存水量 = 此时最近的最低点 - 该单元高度 随时更新最近最低点   code class Solution { public int trap(int[] height) { int res = 0; if (height == null || height.length == 0) { return 0; } //find highest  int highLeft = 0; for(int i = 0; i &amp;lt; height.length; i++) { if (height[i] &amp;gt; height[highLeft]) { highLeft = i; } } int highRight = 0; for(int i = height.</description>
     </item>
     
