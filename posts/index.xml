@@ -93,7 +93,7 @@ git push -u origin master
             <pubDate>Sat, 16 Jan 2021 22:55:43 -0800</pubDate>
             
             <guid>https://jiliangli1997.github.io/posts/simple-markdown/</guid>
-            <description>simple markdown  “#”的数量决定标题字体的大小 文字左右两边用一个*夹住表示斜体   *文字斜体*  文字左右两边用两个*夹住表示加粗  **文字加粗**  清单： 在句子前面加“-”， 缩紧写法可以形成巢状构图 分割线： *** 或者 &amp;mdash; 都是三个 链接： &amp;lt;&amp;gt;  </description>
+            <description>simple markdown  “#”的数量决定标题字体的大小 文字左右两边用一个*夹住表示斜体   *文字斜体*  文字左右两边用两个*夹住表示加粗  **文字加粗**  清单： 在句子前面加“-”， 缩紧写法可以形成巢状构图 分割线： *** 或者 &amp;mdash; 都是三个 链接： &amp;lt;&amp;gt; 图片：将本地图片推到GitHub上， 之后用链接  ![Aaron Swartz](link) </description>
             <content type="html"><![CDATA[<h1 id="simple-markdown">simple markdown</h1>
 <ul>
 <li>“#”的数量决定标题字体的大小</li>
@@ -108,8 +108,10 @@ git push -u origin master
 <li>清单： 在句子前面加“-”， 缩紧写法可以形成巢状构图</li>
 <li>分割线： *** 或者 &mdash; 都是三个</li>
 <li>链接： &lt;&gt;</li>
+<li>图片：将本地图片推到GitHub上， 之后用链接</li>
 </ul>
-]]></content>
+<pre><code>![Aaron Swartz](link)
+</code></pre>]]></content>
         </item>
         
         <item>
